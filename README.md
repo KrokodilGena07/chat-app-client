@@ -5,4 +5,5 @@
 ### Details:
 * ### Webpack, ts-loader
 * ### React, TS
+* ### Zustand
 * ### Module architecture
