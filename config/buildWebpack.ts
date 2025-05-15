@@ -13,7 +13,7 @@ export function buildWebpack(options: BuildOptions) {
         output: {
             path: options.paths.output,
             filename: '[name].[contenthash].js',
-            clean: true
+            clean: true,
         },
         plugins: buildPlugins(options),
         module: {

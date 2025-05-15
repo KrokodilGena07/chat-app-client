@@ -1,0 +1,109 @@
+.Form {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+
+    border-radius: 20px;
+    padding: 60px 60px 40px 60px;
+
+    width: 500px;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.Title {
+    font-weight: 800;
+    font-size: xx-large;
+    margin-bottom: 30px;
+}
+
+.Input {
+    border-radius: 16px;
+    padding: 10px;
+    font-size: x-large;
+    margin-bottom: 20px;
+    width: 100%;
+    outline: 1px solid;
+}
+
+.Input:focus,
+.Password:focus-within {
+    outline-width: 2px;
+}
+
+.Password {
+    border-radius: 16px;
+    margin-bottom: 20px;
+    outline: 1px solid;
+
+    display: flex;
+    align-items: center;
+}
+
+.PasswordInput {
+    font-size: x-large;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.Button {
+    background-color: #000000;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    font-weight: 800;
+    font-size: large;
+}
+
+.Button:hover {
+    background-color: #262626;
+    cursor: pointer;
+}
+
+.Link {
+    text-decoration: none;
+    color: #a6a6a6;
+    text-align: center;
+}
+
+.Text {
+    color: #d7a57c;
+    text-decoration: none;
+}
+
+.PassText {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.Error {
+    color: #ff0000;
+    text-align: center;
+}
+
+.PassIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.PassButton {
+    padding: 0 15px;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .Form {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        padding: 60px 30px;
+    }
+}

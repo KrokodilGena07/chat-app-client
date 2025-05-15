@@ -1,0 +1,7 @@
+.Form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(130deg, #6e473b, #a78d78, #e1d4c2);
+}
