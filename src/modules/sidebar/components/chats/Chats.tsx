@@ -24,7 +24,7 @@ const Chats: FC<ChatsProps> = props => {
         return <div>{props.error.message}</div>
     }
 
-    if (props.data?.length === 0) {
+    if (props.data?.length === 0 && !isFocused) {
         return (
             <div className={styles.NoDataText}>
                 You have no chats
