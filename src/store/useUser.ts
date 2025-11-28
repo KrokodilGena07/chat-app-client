@@ -11,20 +11,22 @@ interface UserStore {
 }
 
 export const useUser = create<UserStore>()(immer(set => ({
-    accessToken: null as null,
-    user: JSON.parse(localStorage.getItem('User') || 'null'),
+    accessToken: localStorage.getItem('TOKEN'),
+    user: JSON.parse(localStorage.getItem('USER') || 'null'),
     setUser: response => {
         set({
             user: response.user,
             accessToken: response.accessToken
         });
-        localStorage.setItem('User', JSON.stringify(response.user));
+        localStorage.setItem('USER', JSON.stringify(response.user));
+        localStorage.setItem('TOKEN', response.accessToken);
     },
     removeUser: () => {
         set({
             user: null,
             accessToken: null
         });
-        localStorage.removeItem('User');
+        localStorage.removeItem('USER');
+        localStorage.removeItem('TOKEN');
     }
 })))

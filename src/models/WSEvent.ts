@@ -1,0 +1,1 @@
+export type WSEvent = 'LOAD_MESSAGES' | 'SEND_MESSAGE';

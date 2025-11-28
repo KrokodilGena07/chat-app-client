@@ -1,12 +1,13 @@
 import React, {FC, FormEvent, useEffect, useState} from 'react';
 import styles from './LoginForm.module.css';
-import {data, Link} from 'react-router-dom';
-import {Pages} from '@/router';
+import {Link} from 'react-router-dom';
 import {LoginInput} from '@/modules/auth/models/LoginInput';
 import {useAuth} from '@/modules/auth/store/useAuth';
 import Eye from '@/assets/svg/eyes/eyeIcon.svg';
 import ClosedEye from '@/assets/svg/eyes/closedeyeIcon.svg';
 import {useUser} from '@/store/useUser';
+import {Pages} from '@/pages';
+import InputPassword from '@/UI/inputPassword/InputPassword';
 
 const LoginForm: FC = () => {
     const [userInput, setUserInput] = useState<LoginInput>({
@@ -44,26 +45,12 @@ const LoginForm: FC = () => {
                         placeholder='Email'
                     />
                 </div>
-                <div className={styles.Password}>
-                    <input
-                        type={passFlag ? 'password' : 'text'}
-                        onChange={e => setUserInput({...userInput, password: e.target.value})}
-                        value={userInput.password}
-                        className={styles.PasswordInput}
-                        placeholder='Password'
-                    />
-                    <button
-                        className={styles.PassButton}
-                        type='button'
-                        onClick={() => setPassFlag(!passFlag)}
-                    >
-                        {passFlag ?
-                            <ClosedEye className={styles.PassIcon}/>
-                            :
-                            <Eye className={styles.PassIcon}/>
-                        }
-                    </button>
-                </div>
+                <InputPassword
+                    flag={passFlag}
+                    setFlag={setPassFlag}
+                    value={userInput.password}
+                    onChange={v => setUserInput({...userInput, password: v})}
+                />
                 {error?.message &&
                     <div className={styles.Error}>
                         {error.message}

@@ -1,0 +1,29 @@
+.Search {
+    position: fixed;
+    height: 100px;
+    width: calc(var(--width) - 1px);
+    background-color: #ffffff;
+    border-bottom: 1px solid #a6a6a6;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Input {
+    width: 100%;
+    font-size: large;
+}
+
+.Icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.Icon:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}

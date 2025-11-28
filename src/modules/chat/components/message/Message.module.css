@@ -1,0 +1,12 @@
+.Message {
+    background: #d7a57c;
+    padding: 5px;
+    border-radius: 12px;
+    width: fit-content;
+    margin-bottom: 4px;
+    align-self: flex-end;
+}
+
+.ML {
+    align-self: flex-start;
+}

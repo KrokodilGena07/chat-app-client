@@ -12,6 +12,10 @@ button, input {
     font-family: inherit;
 }
 
+button {
+    cursor: pointer;
+}
+
 nav a {
     text-decoration: none;
 }

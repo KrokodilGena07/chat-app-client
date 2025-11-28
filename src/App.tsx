@@ -1,16 +1,11 @@
-import React, {FC, Suspense, useEffect} from 'react';
+import {FC, Suspense} from 'react';
 import {useUser} from '@/store/useUser';
-import {privateRoutes, publicRoutes} from '@/router';
+import {privateRoutes, publicRoutes} from '@/pages';
 import {Route, Routes} from 'react-router-dom';
-import {refresh} from '@/utils/refresh';
 
 const App: FC = () => {
-    const {user} = useUser();
+    const {user, accessToken} = useUser();
     const routes = user ? privateRoutes : publicRoutes;
-
-    useEffect(() => {
-        // TODO MAKE REFRESH
-    });
 
     return (
         <Suspense fallback='Loading...'>
@@ -24,7 +19,7 @@ const App: FC = () => {
                 )}
             </Routes>
         </Suspense>
-    );
+    ); // TODO ADD LOADING
 };
 
 export default App;

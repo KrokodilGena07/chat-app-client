@@ -1,0 +1,57 @@
+.Chat {
+    margin-left: 350px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+    .Chat {
+        margin-left: 100px;
+    }
+}
+
+.Messages {
+    height: 90vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.Form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Button {
+    background: #d7a57c;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: large;
+}
+
+.Button:hover {
+    background-color: #c29168;
+    cursor: pointer;
+}
+
+.Input {
+    border-radius: 16px;
+    padding: 10px;
+    font-size: large;
+    margin-bottom: 20px;
+    width: 100%;
+    outline: 1px solid;
+}
+
+.Input:focus {
+    outline-width: 2px;
+}
+
+.FirstMsg {
+    align-self: center;
+    justify-self: center;
+}

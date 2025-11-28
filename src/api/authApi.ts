@@ -7,6 +7,6 @@ export class AuthApi {
     }
 
     static async refresh() {
-        return await api.get<any, AuthResponse>('/auth/refresh');
+        return await api.get<AuthResponse>('/auth/refresh');
     }
 }

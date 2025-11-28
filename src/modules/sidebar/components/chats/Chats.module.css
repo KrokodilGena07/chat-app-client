@@ -1,0 +1,25 @@
+.Chats {
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.NoDataText {
+    margin-top: 100px;
+
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 100px);
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 20px;
+}
+
+.Button {
+    background: #6e473b;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 16px;
+    font-size: 16px;
+}

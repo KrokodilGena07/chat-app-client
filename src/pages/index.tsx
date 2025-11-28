@@ -1,6 +1,6 @@
 import {RouteObject} from 'react-router-dom';
 import LazyAuth from '@/pages/auth/LazyAuth';
-import LazyChat from '@/pages/chat/LazyChat';
+import LazyChat from '@/pages/home/LazyHome';
 
 export enum Pages {
     CHAT = '/',
@@ -10,7 +10,8 @@ export enum Pages {
 }
 
 export const privateRoutes: RouteObject[] = [
-    {path: Pages.CHAT, element: <LazyChat/>}
+    {path: Pages.CHAT, element: <LazyChat/>},
+    {path: '*', element: <LazyChat/>}
 ];
 
 export const publicRoutes: RouteObject[] = [
